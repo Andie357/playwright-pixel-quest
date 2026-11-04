@@ -175,7 +175,7 @@ function HostConsole({
           <div className="grid flex-1 items-start gap-6 lg:grid-cols-[1fr_420px]">
             <div className="flex flex-col gap-4">
               <p className="animate-slide-down text-3xl text-gold pixel-text-shadow">{quest.intro}</p>
-              <QuestCard quest={quest} total={room.questCount} size="lg" />
+              <QuestCard quest={quest} total={room.questCount} size="lg" showStatement={false} />
             </div>
             <Panel className="flex flex-col items-center gap-6 p-6">
               <EnemyEncounter quest={quest} result={null} />

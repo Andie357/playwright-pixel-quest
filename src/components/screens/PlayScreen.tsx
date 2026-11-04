@@ -216,7 +216,7 @@ function VotePanel({
         </Panel>
       )}
 
-      <QuestCard quest={quest} total={room.questCount} />
+      <QuestCard quest={quest} total={room.questCount} showStatement={room.status !== "quest"} />
 
       {myVote ? (
         <Panel variant="gold" className="animate-pop flex flex-col items-center gap-3 p-6 text-center" role="status">

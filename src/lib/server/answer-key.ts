@@ -12,7 +12,7 @@ const ANSWER_KEY: Record<string, AnswerEntry> = {
   "automation-forest": {
     correct: "fact",
     explanation:
-      "Microsoft released Playwright in 2020 as open source (Apache 2.0). One API automates Chromium, Firefox and WebKit for end-to-end testing and general browser automation.",
+      "Playwright is Microsoft's open-source (Apache 2.0) framework for web testing and automation. One API drives Chromium, Firefox and WebKit, and it works with TypeScript/JavaScript, Python, Java and .NET.",
   },
   "framework-arena": {
     correct: "myth",
@@ -27,12 +27,12 @@ const ANSWER_KEY: Record<string, AnswerEntry> = {
   "feature-dungeon": {
     correct: "myth",
     explanation:
-      "Playwright auto-waits for elements to be attached, visible, stable, enabled and able to receive events before acting, and web-first assertions retry automatically. Hard-coded sleeps are discouraged.",
+      "Codegen (npx playwright codegen <url>) is part of the Test Generator and Test Inspector: it records clicks, typing and navigation, picks resilient locators for you, and can add assertions from its toolbar. Other key features: Trace Viewer, fixtures (config file), screenshots and videos on test failures, retries, and auto-waiting.",
   },
   "final-boss": {
-    correct: "myth",
+    correct: "fact",
     explanation:
-      "Playwright emulates mobile devices (viewport, user agent, touch, geolocation) in desktop browsers, but real physical devices are not supported out of the box - a known limitation. Prerequisites for the JS/TS flavour: Node.js, an editor such as VS Code, and basic JavaScript/TypeScript.",
+      "One framework covers end-to-end, functional and API testing, multi-tab flows and mobile device emulation. For example, one test can start at the login page, go through creating a record, and check the confirmation message. Note: mobile is emulated in desktop browsers, not run on real devices.",
   },
 };
 
