@@ -1,0 +1,34 @@
+import type { Metadata, Viewport } from "next";
+import { Press_Start_2P, VT323 } from "next/font/google";
+import "./globals.css";
+
+const pressStart = Press_Start_2P({
+  variable: "--font-press-start",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+const vt323 = VT323({
+  variable: "--font-vt323",
+  weight: "400",
+  subsets: ["latin"],
+});
+
+export const metadata: Metadata = {
+  title: "Playwright Pixel Quest",
+  description: "A pixel-art RPG Myth or Fact quiz for Playwright Session 1.",
+};
+
+export const viewport: Viewport = {
+  themeColor: "#1a1c2c",
+  width: "device-width",
+  initialScale: 1,
+};
+
+export default function RootLayout({ children }: LayoutProps<"/">) {
+  return (
+    <html lang="en" className={`${pressStart.variable} ${vt323.variable} h-full`}>
+      <body className="flex min-h-full flex-col">{children}</body>
+    </html>
+  );
+}
