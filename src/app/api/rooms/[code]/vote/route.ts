@@ -7,7 +7,7 @@ const VOTE_ERRORS: Record<string, [number, string]> = {
   invalid_answer: [400, "Choose MYTH or FACT."],
   room_not_found: [404, "No adventure found with that room code."],
   voting_closed: [409, "Voting is not open for this quest."],
-  time_up: [409, "Time's up! Voting for this quest has closed."],
+  time_up: [409, "Time's Up! Voting for this quest has closed."],
 };
 
 export async function POST(req: Request, ctx: RouteContext<"/api/rooms/[code]/vote">) {

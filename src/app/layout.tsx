@@ -16,7 +16,7 @@ const vt323 = VT323({
 
 export const metadata: Metadata = {
   title: "Playwright Pixel Quest",
-  description: "A pixel-art RPG Myth or Fact quiz for Playwright Session 1.",
+  description: "Session 1 Recap: a pixel-art Myth or Fact quest on Playwright foundations.",
 };
 
 export const viewport: Viewport = {

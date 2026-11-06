@@ -11,28 +11,26 @@ interface AnswerEntry {
 const ANSWER_KEY: Record<string, AnswerEntry> = {
   "automation-forest": {
     correct: "fact",
-    explanation:
-      "Playwright is Microsoft's open-source (Apache 2.0) framework for web testing and automation. One API drives Chromium, Firefox and WebKit, and it works with TypeScript/JavaScript, Python, Java and .NET.",
+    explanation: "It is free to use, and its source code is publicly available.",
   },
   "framework-arena": {
     correct: "myth",
     explanation:
-      "Selenium drives browsers through the W3C WebDriver protocol and a browser-specific driver. Playwright installs its own browser builds (npx playwright install) and controls them directly - no WebDriver binaries needed.",
+      "Playwright offers features such as automatic waiting and built-in tracing, but the best choice depends on your project's requirements and existing framework.",
   },
   "browser-tower": {
     correct: "fact",
-    explanation:
-      "Your test (client) talks to the Playwright server over one persistent connection, which drives each browser through native protocols (CDP for Chromium, custom protocols for Firefox and WebKit). Fewer round trips = faster, less flaky tests.",
+    explanation: "These features help teams validate application behavior and investigate failures.",
   },
   "feature-dungeon": {
     correct: "myth",
     explanation:
-      "Codegen (npx playwright codegen <url>) is part of the Test Generator and Test Inspector: it records clicks, typing and navigation, picks resilient locators for you, and can add assertions from its toolbar. Other key features: Trace Viewer, fixtures (config file), screenshots and videos on test failures, retries, and auto-waiting.",
+      "Automation saves time on repeated testing, but tests may need updates when the application changes. Creating and maintaining tests also requires time and technical skills.",
   },
   "final-boss": {
-    correct: "fact",
+    correct: "myth",
     explanation:
-      "One framework covers end-to-end, functional and API testing, multi-tab flows and mobile device emulation. For example, one test can start at the login page, go through creating a record, and check the confirmation message. Note: mobile is emulated in desktop browsers, not run on real devices.",
+      "Depending on your setup, you may also need to install Playwright's browser binaries and required system dependencies.",
   },
 };
 

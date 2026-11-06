@@ -30,7 +30,7 @@ export function QuestCard({
 
       {showStatement ? (
         <>
-          <p className={`mb-3 font-pixel uppercase text-teal ${large ? "text-[0.65rem] md:text-sm" : "text-[0.6rem]"}`}>
+          <p className={`mb-4 font-pixel uppercase leading-snug text-teal ${large ? "text-xs md:text-base lg:text-lg" : "text-xs"}`}>
             Topic: {quest.topic}
           </p>
           <p key="statement" className={`animate-pop leading-tight text-ink ${large ? "text-4xl md:text-5xl lg:text-6xl" : "text-[1.7rem]"}`}>
@@ -45,7 +45,7 @@ export function QuestCard({
           <p className={`font-pixel uppercase leading-snug text-plum ${large ? "text-2xl md:text-4xl lg:text-5xl" : "text-lg"}`}>
             {quest.name}
           </p>
-          <p className={`mt-4 font-pixel uppercase text-teal ${large ? "text-xs md:text-base" : "text-[0.6rem]"}`}>
+          <p className={`mt-5 font-pixel uppercase leading-snug text-teal ${large ? "text-sm md:text-xl lg:text-2xl" : "text-xs"}`}>
             Topic: {quest.topic}
           </p>
           <p className={`mt-6 font-pixel uppercase text-ink/60 ${large ? "text-xs md:text-sm" : "text-[0.6rem]"}`}>

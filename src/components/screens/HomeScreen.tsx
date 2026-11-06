@@ -6,7 +6,7 @@ import { useState, type FormEvent } from "react";
 import { GameShell } from "@/components/game/GameShell";
 import { QuestMap } from "@/components/game/QuestMap";
 import { BOSS, ENEMIES, HERO, Sprite } from "@/components/pixel/Sprite";
-import { Panel, PixelButton, PixelHeading } from "@/components/pixel/ui";
+import { Panel, PixelButton, PixelHeading, Tag } from "@/components/pixel/ui";
 import { api, ApiClientError } from "@/lib/api";
 import { DEFAULT_TIMER_SECONDS } from "@/lib/quests";
 import { isValidRoomCode, normalizeRoomCode } from "@/lib/room-mapper";
@@ -51,14 +51,18 @@ export function HomeScreen() {
             <Sprite art={ENEMIES[0]} scale={4} className="animate-float" />
             <Sprite art={BOSS} scale={4} className="hidden animate-float sm:block" />
           </div>
+          <Tag color="sky">Session 1 Recap</Tag>
           <PixelHeading as="h1" className="text-2xl text-gold sm:text-4xl md:text-5xl">
             Playwright
             <br />
             Pixel Quest
           </PixelHeading>
+          <PixelHeading as="p" className="text-xs text-aqua sm:text-sm md:text-base">
+            Playwright Foundations Quest
+          </PixelHeading>
           <p className="max-w-2xl text-2xl text-snow pixel-text-shadow md:text-3xl">
-            Five quests. One question each. Is it a <span className="text-ruby">MYTH</span> or a{" "}
-            <span className="text-lime">FACT</span>? A training adventure for Playwright Session 1.
+            Five quests to recap Session 1 before Session 2 begins. Is it a <span className="text-ruby">MYTH</span> or a{" "}
+            <span className="text-lime">FACT</span>?
           </p>
         </header>
 

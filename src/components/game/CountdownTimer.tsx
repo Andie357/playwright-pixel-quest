@@ -19,15 +19,17 @@ export function CountdownTimer({
   const barColor = fraction > 0.5 ? "bg-lime" : fraction > 0.25 ? "bg-gold" : "bg-ruby";
   const mm = Math.floor(seconds / 60);
   const ss = String(seconds % 60).padStart(2, "0");
+  const digitSize = size === "lg" ? "text-5xl md:text-7xl" : "text-3xl md:text-4xl";
+  const doneSize = size === "lg" ? "text-3xl md:text-4xl" : "text-2xl md:text-4xl";
 
   return (
     <div className="flex flex-col items-center gap-3" role="timer" aria-live="off" aria-label={`${seconds} seconds left`}>
       <div
-        className={`font-pixel pixel-text-shadow tabular-nums ${size === "lg" ? "text-5xl md:text-7xl" : "text-3xl md:text-4xl"} ${
+        className={`whitespace-nowrap font-pixel pixel-text-shadow tabular-nums ${done ? doneSize : digitSize} ${
           done ? "text-ruby" : danger ? "animate-pulse-danger" : "text-snow"
         } ${danger ? "animate-shake" : ""}`}
       >
-        {done ? "TIME UP!" : `${mm}:${ss}`}
+        {done ? "Time's Up!" : `${mm}:${ss}`}
       </div>
       <div className="flex gap-[3px] bg-ink p-[3px]" aria-hidden>
         {Array.from({ length: SEGMENTS }, (_, i) => (

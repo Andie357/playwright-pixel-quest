@@ -156,7 +156,7 @@ function WaitingRoom({ room, heroName }: { room: RoomState; heroName: string }) 
       <Sprite art={HERO} scale={7} className="animate-bob" />
       <PixelHeading className="text-base text-gold">Welcome, {heroName}</PixelHeading>
       <p className="text-2xl">
-        Waiting for the host to begin the adventure
+        Waiting for the host to begin the Session 1 recap
         <span className="animate-blink">...</span>
       </p>
       <p className="text-xl text-mist">
@@ -239,7 +239,7 @@ function VotePanel({
         </Panel>
       ) : timeUp ? (
         <Panel className="flex flex-col items-center gap-3 p-5 text-center" role="status">
-          <span className="font-pixel text-sm text-ruby">Time&apos;s up!</span>
+          <span className="font-pixel text-sm text-ruby">Time&apos;s Up!</span>
           <p className="text-2xl">You didn&apos;t submit an answer this round. Wait for the reveal.</p>
         </Panel>
       ) : (
@@ -327,7 +327,7 @@ function PlayerFinale({
       <Confetti pieces={50} />
       <Sprite art={TROPHY} scale={6} className="animate-float" title="Trophy" />
       <PixelHeading as="h1" className="text-2xl text-gold">
-        Adventure complete!
+        Recap complete!
       </PixelHeading>
       <Panel className="flex w-full flex-col items-center gap-2 p-6">
         <span className="font-pixel text-xs uppercase text-mist">{heroName}&apos;s score</span>
@@ -353,7 +353,7 @@ function PlayerFinale({
           })}
         </ol>
       </Panel>
-      <p className="text-xl text-mist">Thanks for playing Playwright Pixel Quest!</p>
+      <p className="text-xl text-mist">Session 1 recap complete. See you in Session 2!</p>
     </div>
   );
 }

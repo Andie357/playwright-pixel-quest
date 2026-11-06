@@ -237,9 +237,12 @@ function HostHeader({ room, live, joinUrl }: { room: RoomState; live: ReturnType
   return (
     <header className="border-b-4 border-ink bg-night/90">
       <div className="mx-auto flex w-full max-w-[1600px] flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-3 md:px-8">
-        <Link href="/" className="font-pixel text-xs text-gold pixel-text-shadow md:text-sm">
-          Pixel Quest
-        </Link>
+        <span className="flex items-center gap-3">
+          <Link href="/" className="font-pixel text-xs text-gold pixel-text-shadow md:text-sm">
+            Pixel Quest
+          </Link>
+          <Tag color="sky">Session 1 Recap</Tag>
+        </span>
         {room.status !== "lobby" && (
           <span className="text-2xl text-mist md:text-3xl">
             Join at <span className="text-snow">{joinUrl.replace(/^https?:\/\//, "")}</span>
@@ -287,7 +290,8 @@ function LobbyView({
   return (
     <div className="grid flex-1 items-stretch gap-6 lg:grid-cols-[1.2fr_1fr]">
       <Panel className="flex flex-col items-center gap-6 p-6 text-center md:p-10">
-        <PixelHeading className="text-lg text-aqua md:text-2xl">Join the quest!</PixelHeading>
+        <PixelHeading className="text-lg text-aqua md:text-2xl">Join the recap quest!</PixelHeading>
+        <p className="-mt-3 font-pixel text-[0.65rem] uppercase text-mist md:text-xs">Playwright Foundations Quest</p>
         <div className="flex flex-col items-center gap-8 md:flex-row">
           {joinUrl && <QrCode value={joinUrl} size={240} className="p-0 shadow-[0_0_0_6px_#0d0e17]" />}
           <div className="flex flex-col items-center gap-3">
@@ -363,7 +367,7 @@ function VotingView({
           {allSubmitted
             ? "Every hero has answered!"
             : timeUp
-              ? "Time's up - ready to reveal."
+              ? "Time's Up! Ready to reveal."
               : "Reveal unlocks when everyone answers or the timer runs out."}
         </p>
       </Panel>
@@ -438,12 +442,12 @@ function FinishedView({ room, busy, onNew }: { room: RoomState; busy: boolean; o
       <div className="flex flex-col items-center gap-4 text-center">
         <Sprite art={TROPHY} scale={8} className="animate-float" title="Trophy" />
         <PixelHeading as="h1" className="text-3xl text-gold md:text-6xl">
-          {bossDefeated ? "Victory!" : "Quest complete!"}
+          {bossDefeated ? "Victory!" : "Recap complete!"}
         </PixelHeading>
         <p className="text-3xl pixel-text-shadow md:text-4xl">
           {bossDefeated
-            ? "The Flaky Test Dragon has been defeated. Your party is ready for Playwright!"
-            : "The dragon escaped this time - but your party learned its weaknesses."}
+            ? "The Flaky Test Dragon has been defeated. Session 1 recap complete - your party is ready for Session 2!"
+            : "The dragon escaped this time - but your party learned its weaknesses. On to Session 2!"}
         </p>
       </div>
 

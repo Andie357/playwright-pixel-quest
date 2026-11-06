@@ -6,11 +6,11 @@ on their phones or laptops and vote in real time.
 
 | Quest | Name              | Topic                                        |
 | ----- | ----------------- | -------------------------------------------- |
-| 1     | Automation Forest | What is Playwright?                          |
-| 2     | Framework Arena   | Playwright vs Selenium                       |
-| 3     | Browser Tower     | Playwright architecture                      |
-| 4     | Feature Dungeon   | Key Features of Playwright (Codegen)         |
-| 5     | Final Boss        | Advantages and Disadvantages of Playwright   |
+| 1     | Automation Forest | Playwright Introduction                      |
+| 2     | Framework Arena   | Choosing a Testing Framework                 |
+| 3     | Browser Tower     | Playwright Key Features                      |
+| 4     | Feature Dungeon   | Test Automation Maintenance                  |
+| 5     | Final Boss        | Playwright Installation                      |
 
 **Stack:** Next.js 16 (App Router, TypeScript), Tailwind CSS v4, Supabase (Postgres + Realtime), deployable to Vercel.
 
